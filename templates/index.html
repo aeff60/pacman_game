@@ -8,7 +8,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 </head>
 <body>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="lobby">
+        <input type="text" id="pacmanImageUrl" placeholder="Enter Pacman Image URL">
+        <button onclick="createGame()">Create Game</button>
+        <input id="gameIdInput" placeholder="Enter Game ID">
+        <button onclick="joinGame()">Join Game</button>
+    </div>
+    <canvas id="gameCanvas" width="900" height="900" style="display: none;"></canvas>
+
+
     <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    
 </body>
 </html>
